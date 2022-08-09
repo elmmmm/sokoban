@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>推箱子小游戏</title>
+    <style>
+        .content{
+            position: relative;
+        }
+        #mycanv {
+            display: block;
+            margin: 0 auto;
+            background-color: #ebfaff;
+            border: 1px solid skyblue;
+        }
+
+        #nav {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 110px;
+            height: 160px;
+            text-align: center;
+            position: absolute;
+            right: 8.5rem;
+        }
+
+        #g-level {
+            width: 60px;
+            text-align: center;
+        }
+
+        .g-btn {
+            width: 100%;
+            height: 30px;
+            vertical-align: middle;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div id="nav">
+            <button class="g-btn" onclick="select_level(-1)">上一关</button>
+            <button class="g-btn" onclick="select_level(1)">下一关</button>
+            <input id="g-level" type="number" value="0"/>
+            <button class="g-btn go_btn" onclick="select_level()">GO</button>
+            <button class="g-btn" onclick="select_level(0)">重新开始</button>
+        </div>
+        <canvas id="mycanv" width="576" height="576"></canvas>
+    </div>
+    <script type="text/javascript" src="boxdata100.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>
